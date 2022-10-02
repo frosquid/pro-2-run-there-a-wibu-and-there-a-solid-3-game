@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .player{
+      position: absolute;
+      font-size: 30px;
+      background-color: burlywood;
+      height: 50px;
+      width: 50px;
+      display: flex;
+      place-content: center;
+      place-items: center;
+      font-family: Arial, Helvetica, sans-serif;
+      left: 250px;
+      top: 250px;
+    }
+    .bullet{
+      position: absolute;
+      background-color: red;
+      height: 10px;
+      width: 10px;
+    }
+    .canvas{
+      position: relative;
+      width: 500px;
+      height: 500px;
+      background-color: blue;
+    }
+    .npc{
+      color: white;
+      font-size: 30px;
+      position: absolute;
+      background-color: rgb(116, 114, 204);
+      height: 50px;
+      width: 50px;
+      
+    }
+    .npc .name{
+      height: 100%;
+      width: 100%;
+      position: relative;
+    }
+    .npc .name .lo{
+      text-align: center;
+      top : -200%;
+      position: absolute;
+    }
+    .npc .name{
+      display: flex;
+      place-content: center;
+      place-items: center;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .end{
+      background-color: rgba(109, 4, 4, 0.767);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      display: flex;
+      place-content: center;
+      place-items: center;
+      z-index: 99999;
+    }
+    .restart{
+      user-select: none;
+      cursor: pointer;
+      font-family: Arial, Helvetica, sans-serif;
+      display: inline-block;
+      font-size: 30px;
+      padding: 20px;
+      background-color: rgb(255, 251, 19);
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="canvas" id="canvas">
+    <div class="end" id="end">
+      <div class="restart" onclick="restart()">Restart</div>
+    </div>
+    <div class="npc" id="npc"><div class="name"><p class="lo" id="lvl"></p><div id="blood"></div></div></div>
+    <div id="shot"></div>
+    <div class="player" id="player"></div>
+  </div>
+  </div>
+  <script src="core.js"></script>
+</body>
+</html>
